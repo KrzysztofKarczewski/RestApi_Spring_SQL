@@ -1,10 +1,17 @@
-package pl.karczewski.videoapp;   //KLASA PRZECHOWYWUJĄCA KASETY WIDEO
+package pl.karczewski.videoapp.dao.entity;   //KLASA PRZECHOWYWUJĄCA KASETY WIDEO
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.time.LocalDate;
 import java.util.List;
 
+@Entity                                                                 //MADE ENTITY CLASS
 public class VideoCassette {
 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
     private Long id;
 
     private String title;
