@@ -1,6 +1,7 @@
 package pl.karczewski.videoapp;   //KLASA PRZECHOWYWUJĄCA KASETY WIDEO
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class VideoCassette {
 
@@ -9,6 +10,15 @@ public class VideoCassette {
     private String title;
 
     private LocalDate productionYear;                                   //JAVA 8 DATE INFORMATION INSIDE
+
+    public VideoCassette() {                                            //NO PARAMS CONSTRUCTOR
+    }
+
+    public VideoCassette(Long id, String title, LocalDate productionYear) {     //ALL PARAMS CONSTRUCTOR
+        this.id = id;
+        this.title = title;
+        this.productionYear = productionYear;
+    }
 
     public Long getId() {
         return id;
